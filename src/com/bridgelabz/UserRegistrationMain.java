@@ -18,7 +18,7 @@ public class UserRegistrationMain {
                 userRegistration.validLastName();
                 break;
             default:
-                System.out.println("Invalid Input");
+                System.out.println("Invalid Input..");
         }
     }
 }
