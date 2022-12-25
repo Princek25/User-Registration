@@ -36,6 +36,7 @@ public class UserRegistration {
             System.out.println("Valid Email ID");
         } else System.out.println("Invalid Email ID");
     }
+
     public void validMobile() {
         System.out.print("Enter Mobile No: ");
         String input = scanner.nextLine();
@@ -44,5 +45,15 @@ public class UserRegistration {
         if (matcher.matches()) {
             System.out.println("Valid Mobile Number");
         } else System.out.println("Invalid Mobile Number");
+    }
+
+    public void validPassword() {
+        System.out.print("Enter Password (Minimum 8 Characters): ");
+        String input = scanner.nextLine();
+        Pattern pattern = Pattern.compile(".{8,}");
+        Matcher matcher = pattern.matcher(input);
+        if (matcher.matches()) {
+            System.out.println("Valid Password");
+        } else System.out.println("Invalid Password");
     }
 }

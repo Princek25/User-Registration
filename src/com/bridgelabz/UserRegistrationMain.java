@@ -8,7 +8,8 @@ public class UserRegistrationMain {
         UserRegistration userRegistration = new UserRegistration();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Press 1 to Enter First Name \nPress 2 to Enter Last Name " +
-                " \nPress 3 to Enter Email \nPress 4 to Enter Mobile No ");
+                " \nPress 3 to Enter Email \nPress 4 to Enter Mobile No " +
+                "\nPress 5 to Password (Minimum 8 Character)");
         int input = scanner.nextInt();
 
         switch (input) {
@@ -23,6 +24,9 @@ public class UserRegistrationMain {
                 break;
             case 4:
                 userRegistration.validMobile();
+                break;
+            case 5:
+                userRegistration.validPassword();
                 break;
             default:
                 System.out.println("Invalid Input..");
