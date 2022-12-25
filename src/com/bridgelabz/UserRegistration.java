@@ -36,4 +36,13 @@ public class UserRegistration {
             System.out.println("Valid Email ID");
         } else System.out.println("Invalid Email ID");
     }
+    public void validMobile() {
+        System.out.print("Enter Mobile No: ");
+        String input = scanner.nextLine();
+        Pattern pattern = Pattern.compile("(0|91)?[6789][0-9]{9}");
+        Matcher matcher = pattern.matcher(input);
+        if (matcher.matches()) {
+            System.out.println("Valid Mobile Number");
+        } else System.out.println("Invalid Mobile Number");
+    }
 }
