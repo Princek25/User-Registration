@@ -56,4 +56,14 @@ public class UserRegistration {
             System.out.println("Valid Password");
         } else System.out.println("Invalid Password");
     }
+
+    public void validUpperCasePassword() {
+        System.out.print("Enter Password (Minimum 8 Characters): ");
+        String input = scanner.nextLine();
+        Pattern pattern = Pattern.compile("[A-Z].{7,}");
+        Matcher matcher = pattern.matcher(input);
+        if (matcher.matches()) {
+            System.out.println("Valid Password");
+        } else System.out.println("Invalid Password");
+    }
 }
