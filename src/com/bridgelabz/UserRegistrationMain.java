@@ -10,7 +10,8 @@ public class UserRegistrationMain {
         System.out.println("Press 1 to Enter First Name \nPress 2 to Enter Last Name " +
                 " \nPress 3 to Enter Email \nPress 4 to Enter Mobile No " +
                 "\nPress 5 to Enter Password (Minimum 8 Character) " +
-                "\nPress 6 to Enter Password (1 Upper case) ");
+                "\nPress 6 to Enter Password (1 Upper case) " +
+                "\nPress 7 to Enter Password (1 Numeric Character)");
         int input = scanner.nextInt();
 
         switch (input) {
@@ -31,6 +32,9 @@ public class UserRegistrationMain {
                 break;
             case 6:
                 userRegistration.validUpperCasePassword();
+                break;
+            case 7:
+                userRegistration.validNumericPassword();
                 break;
             default:
                 System.out.println("Invalid Input..");
