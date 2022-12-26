@@ -11,7 +11,8 @@ public class UserRegistrationMain {
                 " \nPress 3 to Enter Email \nPress 4 to Enter Mobile No " +
                 "\nPress 5 to Enter Password (Minimum 8 Character) " +
                 "\nPress 6 to Enter Password (1 Upper case) " +
-                "\nPress 7 to Enter Password (1 Numeric Character)");
+                "\nPress 7 to Enter Password (1 Numeric Character)" +
+                "\nPress 8 to Enter Password (1 Special Character)");
         int input = scanner.nextInt();
 
         switch (input) {
@@ -35,6 +36,9 @@ public class UserRegistrationMain {
                 break;
             case 7:
                 userRegistration.validNumericPassword();
+                break;
+            case 8:
+                userRegistration.valid1SpecialCharPassword();
                 break;
             default:
                 System.out.println("Invalid Input..");
